@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="download.png">
+    <title>Download Your File</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Kanit&family=Lato:ital,wght@1,700&family=Roboto+Mono&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background: #000;
+        }
+
+        div {
+            height: 100vh;
+            display: flex;
+        }
+
+        button {
+            border: 0;
+            cursor: pointer;
+            border-radius: 78px;
+            font-size: 8vh;
+            text-align: center;
+            font-family: 'Kanit', sans-serif;
+            background-color: #7bff53;
+            padding: 10px;
+            height: 27vh;
+            width: 60vh;
+            margin: auto;
+            transition: box-shadow .2s;
+        }
+
+        button:hover {
+            box-shadow: 0 0 30px rgba(255, 255, 255, 0.5);
+        }
+
+        /* Media Query for Mobile Devices */
+        @media (max-width: 480px) {
+
+            * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+
+            }
+
+            button {
+                font-size: 5vh;
+                height: 100px;
+                width: 280px;
+            }
+
+
+        }
+    </style>
+</head>
+
+<body>
+    <div><button onclick="download()">Download</button></div>
+    <script>
+        function download() {
+            var a = document.createElement("a");
+            a.href = 'TravelYourHeart.zip';
+            a.setAttribute("download", "TravelYourHeart.zip");
+            a.click();
+        }
+    </script>
+</body>
+
+</html>
